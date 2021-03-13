@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo City: Learn Basic CS Algorithms Visually</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='pictures/logo.png') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='scripts/header.js') }}" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header-container">
+            <div class="left-side">
+                <a href="/sorting">Sorting</a>
+                <a href="/data-structures">Data Structures</a>
+            </div>
+            <div class="logo-container">
+                <img 
+                    src="{{ url_for('static', filename='pictures/logo.png') }}"
+                    class="logo"
+                    alt="logo: picture of city"
+                >
+            </div>
+            <div 
+                class="menu-button" 
+                id="menu-button" 
+                onclick="toggleNavBar()"
+            >
+                📘 Menu
+            </div>
+        </div>
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
