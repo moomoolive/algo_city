@@ -1,0 +1,119 @@
+body {
+    margin: 0 0 0 0;
+    background-color: #2a2a2a;
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.app-container {
+    min-width: 340px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.logo-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 13px;
+}
+
+.logo {
+    height: 70%;
+}
+
+.header-container {
+    background-color: #6f6f6f;
+    height: 50px;
+}
+
+.header-container .left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    height: 50px;
+    top: 0;
+    width: 50%;
+    max-width: 300px;
+}
+
+.header-container .left-side button {
+    background-color: #bc6ff1;
+    text-align: center;
+    height: 29px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 99999px;
+    color: #892cdc;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.menu-button {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.pressed {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset !important;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: none;
+}
+
+.dropdown-menu div {
+    background-color: #828282;
+    width: 100%;
+    width: 100vw;
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.dropdown-menu div a, .dropdown-menu .close-menu {
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    color: #892cdc;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .menu-button {
+        display: block;
+    }
+
+    .header-container .left-side a {
+        display: none;
+    }
+
+    .large-screen-nav {
+        display: none;
+    }
+}

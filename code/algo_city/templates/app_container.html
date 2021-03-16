@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algo City: Learn Basic CS Algorithms Visually</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/app.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='pictures/logo.png') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -15,8 +15,15 @@
     <div class="app-container">
         <div class="header-container">
             <div class="left-side">
-                <a href="/sorting">Sorting</a>
-                <a href="/data-structures">Data Structures</a>
+                <button class="large-screen-nav" onclick="toSorting()">Sorting</button>
+                <button class="large-screen-nav" onclick="toDataStructures()">Data Structures</button>
+                <button
+                    class="menu-button" 
+                    id="menu-button"
+                    onclick="toggleNavBar()" 
+                >
+                    📘 Menu
+                </button>
             </div>
             <div class="logo-container">
                 <img 
@@ -25,15 +32,20 @@
                     alt="logo: picture of city"
                 >
             </div>
-            <div 
-                class="menu-button" 
-                id="menu-button" 
-                onclick="toggleNavBar()"
-            >
-                📘 Menu
+            <div class="dropdown-menu" id="dropdown-menu">
+                <div>
+                    <a onclick="toSorting()">Sorting</a>
+                </div>
+                <div>
+                    <a onclick="toDataStructures()">Data Structures</a>
+                </div>
+                <div class="close-menu" onclick="toggleNavBar()">
+                    Close
+                </div>
             </div>
         </div>
         {% block content %} {% endblock %}
+        <div class="footer"></div>
     </div>
 </body>
 </html>
