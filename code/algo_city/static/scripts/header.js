@@ -1,38 +1,42 @@
-var header = {
-    button: window.document.getElementById("menu-button"),
-    dropdownMenu: window.document.getElementById("dropdown-menu"),
-    showDropdownMenu: false
-}
+function createHeader() {
+    var button = window.document.getElementById("menu-button")
+    var dropdownMenu = window.document.getElementById("dropdown-menu")
+    var showDropdownMenu = false
 
-function toggleNavBar() {
-    var toggleHeaderVisibility = function () {
-        header.showDropdownMenu = !header.showDropdownMenu
+    function toggleHeaderVisibility () {
+        showDropdownMenu = !showDropdownMenu
     }
-    var toggleNavIcon = function (isActive) {
+    function toggleNavIcon (isActive) {
         var icon = '📘'
         if (isActive) {
             icon = '📖'
         }
         var text = icon + ' Menu'
-        header.button.innerHTML = text
+        button.innerHTML = text
     }
-    var togglePressedBoxShadow = function (isActive) {
+    function togglePressedBoxShadow (isActive) {
         var className = 'pressed'
         if (isActive) {
-            header.button.classList.add(className)
+            button.classList.add(className)
         } else {
-            header.button.classList.remove(className)
+            button.classList.remove(className)
         }
     }
-    var toggleDropdownMenuVisibility = function (isActive) {
-        header.dropdownMenu.style.display = isActive ? 'block' : 'none'
+    function toggleDropdownMenuVisibility (isActive) {
+        dropdownMenu.style.display = isActive ? 'block' : 'none'
     }
 
-    toggleHeaderVisibility()
-    toggleNavIcon(header.showDropdownMenu)
-    togglePressedBoxShadow(header.showDropdownMenu)
-    toggleDropdownMenuVisibility(header.showDropdownMenu)
+    return {
+        toggleNavBar: function() {
+            toggleHeaderVisibility()
+            toggleNavIcon(showDropdownMenu)
+            togglePressedBoxShadow(showDropdownMenu)
+            toggleDropdownMenuVisibility(showDropdownMenu)
+        }
+    }
 }
+
+var header = createHeader()
 
 function toSorting() {
     window.location.href = '/sorting'

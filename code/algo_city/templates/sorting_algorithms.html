@@ -1,0 +1,64 @@
+{% extends 'app_container.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/sorting-algorithms.css') }}">
+
+<div class="sorting-options-label-container">
+    <div class="sorting-options-label-text arrow showing-options">
+        > 
+    </div>
+    <div class="sorting-options-label-text">
+        Sorting Options
+    </div>
+</div>
+
+<div class="algorithm-selection-container">
+    
+    <div>
+        <div class="selector-description">
+            Algorithm
+        </div>
+        <select 
+            class="algorithm-selector" 
+            name="" 
+            id="algorithm"
+        >
+            <option value="merge-sort">Merge-Sort</option>
+            <option value="quick-sort">Quick-Sort</option>
+        </select>
+    </div>
+
+    <div>
+        <div class="selector-description">
+            Item Theme
+        </div>
+        <select 
+            class="item-theme-selector" 
+            name="" 
+            id="item-theme"
+        >
+            <option value="dog">Dogs 🐕</option>
+            <option value="cat">Cats 🐈</option>
+            <option value="bird">Parakeets 🦜</option>
+        </select>
+    </div>
+
+    <div>
+        <div class="selector-description">
+            Number of Items
+        </div>
+        <div class="number-of-items-to-sort-container">
+            <button class="number-of-items-button red">
+                -
+            </button>
+            <div class="number-of-items-text">
+                14
+            </div>
+            <button class="number-of-items-button green">
+                +
+            </button>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

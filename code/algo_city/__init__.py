@@ -5,7 +5,7 @@ def create_app():
 
     @app.route('/')
     def home():
-        return flask.render_template('app_container.html')
+        return flask.render_template('homepage.html')
 
     from algo_city.routes.sorting import sort
 

@@ -2,6 +2,6 @@ import flask
 
 sort = flask.Blueprint('sorting', __name__)
 
-@sort.route('/merge-sort')
+@sort.route('/sorting')
 def merge_sort():
-    return "merge-sort"
+    return flask.render_template('sorting_algorithms.html')

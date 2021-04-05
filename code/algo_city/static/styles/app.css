@@ -9,6 +9,11 @@ div {
     padding: 0 0 0 0;
 }
 
+p {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
 .app-container {
     min-width: 340px;
 }
@@ -59,7 +64,7 @@ button {
     padding-bottom: 3px;
     padding-left: 6px;
     padding-right: 6px;
-    border-radius: 99999px;
+    border-radius: 4px;
     color: #892cdc;
     font-weight: bold;
     font-size: 18px;

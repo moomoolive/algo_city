@@ -1,0 +1,28 @@
+
+.buttons-container {
+    width: 100vw;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.to-section-button {
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #bc6ff1;
+}
+
+@media screen and (max-width: 600px) {
+
+}

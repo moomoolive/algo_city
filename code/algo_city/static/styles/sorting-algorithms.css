@@ -1,0 +1,73 @@
+.algorithm-selection-container {
+    width: 100vw;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.algorithm-selector, .item-theme-selector {
+    margin-bottom: 30px;
+    width: 120px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.number-of-items-to-sort-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.selector-description {
+    margin-bottom: 22px;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.number-of-items-text {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: whitesmoke;
+}
+
+.number-of-items-button {
+    width: 30px;
+    height: 30px;
+    background-color: lightblue;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sorting-options-label-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.sorting-options-label-text {
+    font-size: 24px;
+    color: white;
+}
+
+.arrow {
+    margin-right: 10px;
+}
+
+.showing-options {
+    transform: rotate(90deg);
+}
