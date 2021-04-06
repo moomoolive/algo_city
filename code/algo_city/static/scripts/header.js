@@ -16,6 +16,7 @@ function createHeader() {
     }
     function togglePressedBoxShadow (isActive) {
         var className = 'pressed'
+        button.classList.toggle("pressed")
         if (isActive) {
             button.classList.add(className)
         } else {

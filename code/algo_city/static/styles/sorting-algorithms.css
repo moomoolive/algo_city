@@ -1,4 +1,4 @@
-.algorithm-selection-container {
+.algorithm-selection-container, .start-button-container {
     width: 100vw;
     max-width: 1000px;
     display: flex;
@@ -59,6 +59,10 @@
     margin-top: 50px;
 }
 
+.hide-options {
+    display: none;
+}
+
 .sorting-options-label-text {
     font-size: 24px;
     color: white;
@@ -70,4 +74,11 @@
 
 .showing-options {
     transform: rotate(90deg);
+}
+
+.start-button {
+    height: 30px;
+    width: 140px;
+    font-size: 15px;
+    border-radius: 7px;
 }

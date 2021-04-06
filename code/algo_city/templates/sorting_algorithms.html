@@ -1,10 +1,21 @@
 {% extends 'app_container.html' %}
 
 {% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='styles/sorting-algorithms.css') }}">
+<link 
+    rel="stylesheet" 
+    href="{{ url_for('static', filename='styles/sorting-algorithms.css') }}"
+>
+<script 
+    src="{{ url_for('static', filename='scripts/sortingAlgorithms.js') }}" 
+    defer
+>
+</script>
 
-<div class="sorting-options-label-container">
-    <div class="sorting-options-label-text arrow showing-options">
+<div 
+    class="sorting-options-label-container"
+    onclick="optionsSelector.toggleOptionVisibility()"
+>
+    <div class="sorting-options-label-text arrow" id="dropdown-arrow">
         > 
     </div>
     <div class="sorting-options-label-text">
@@ -12,20 +23,16 @@
     </div>
 </div>
 
-<div class="algorithm-selection-container">
+<div 
+    class="algorithm-selection-container hide-options" 
+    id="selection-options"
+>
     
     <div>
         <div class="selector-description">
             Algorithm
         </div>
-        <select 
-            class="algorithm-selector" 
-            name="" 
-            id="algorithm"
-        >
-            <option value="merge-sort">Merge-Sort</option>
-            <option value="quick-sort">Quick-Sort</option>
-        </select>
+        <select class="algorithm-selector" id="algorithm-option"></select>
     </div>
 
     <div>
@@ -34,12 +41,9 @@
         </div>
         <select 
             class="item-theme-selector" 
-            name="" 
-            id="item-theme"
+            id="theme-option"
+            onchange="optionsSelector.themeChange()"
         >
-            <option value="dog">Dogs 🐕</option>
-            <option value="cat">Cats 🐈</option>
-            <option value="bird">Parakeets 🦜</option>
         </select>
     </div>
 
@@ -48,17 +52,30 @@
             Number of Items
         </div>
         <div class="number-of-items-to-sort-container">
-            <button class="number-of-items-button red">
+            <button 
+                class="number-of-items-button red"
+                onclick="optionsSelector.incrementItemCount(-1)"
+            >
                 -
             </button>
-            <div class="number-of-items-text">
+            <div class="number-of-items-text" id="count-option">
                 14
             </div>
-            <button class="number-of-items-button green">
+            <button 
+                class="number-of-items-button green"
+                onclick="optionsSelector.incrementItemCount(1)"
+            >
                 +
             </button>
         </div>
     </div>
 
 </div>
+
+<div class="start-button-container">
+    <button class="start-button" id="start-button">
+        Start Sorting 🦜
+    </button>
+</div>
+
 {% endblock %}
