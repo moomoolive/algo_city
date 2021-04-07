@@ -5,7 +5,6 @@ function createOptionsSelector() {
     var theme = window.document.getElementById("theme-option")
     var itemsCount = window.document.getElementById("count-option")
     var themeOptions = {
-        bird: "Parakeets 🦜",
         dog: "Dogs 🐕",
         cat:  "cat 🐈"
     }
@@ -70,7 +69,47 @@ function createOptionsSelector() {
     }
 }
 
+function createItemSorter() {
+    var container = window.document.getElementById("item-sorting")
+
+    function createSortableItem(value, id) {
+        var el = window.document.createElement("div")
+        el.setAttribute("id", "sortable-" + id)
+        
+        var hungerLevelCaption = window.document.createElement("div")
+        hungerLevelCaption.innerText = "Hunger Level: " + value
+        el.appendChild(hungerLevelCaption)
+        
+        var image = window.document.createElement("img")
+        image.src = "../pictures/sortables/dog.png"
+        el.appendChild(image)
+    
+        return el
+    }
+    function removeSortableItem() {
+        container.lastChild.remove()
+    }
+
+    return {
+        updateItemsDisplay(count) {
+            var currentDisplayCount = container.childElementCount
+            var updatedCount = count - currentDisplayCount
+            for (let i = 0; i < Math.abs(updatedCount); i++) {
+                if (updatedCount > -1) {
+                    var child = createSortableItem(68, currentDisplayCount)
+                    container.appendChild(child)
+                } else if (currentDisplayCount > 0) {
+                    removeSortableItem()
+                }
+            }
+        }
+    }
+}
+
 var optionsSelector = createOptionsSelector()
+
+var itemSorter = createItemSorter()
+//itemSorter.updateItemsDisplay(optionsSelector.getItemCount())
 
 var startButton = window.document.getElementById("start-button")
 window.addEventListener('theme-change', function() {

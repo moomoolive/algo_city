@@ -1,4 +1,4 @@
-.algorithm-selection-container, .start-button-container {
+.algorithm-selection-container, .start-button-container, .sorted-items-container {
     width: 100vw;
     max-width: 1000px;
     display: flex;
@@ -9,6 +9,7 @@
     margin-right: auto;
     margin-top: 50px;
 }
+
 
 .algorithm-selector, .item-theme-selector {
     margin-bottom: 30px;
@@ -81,4 +82,9 @@
     width: 140px;
     font-size: 15px;
     border-radius: 7px;
+}
+
+.sorted-items-header {
+    color: white;
+    font-size: 19px;
 }

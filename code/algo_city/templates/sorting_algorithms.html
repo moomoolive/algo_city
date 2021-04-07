@@ -74,8 +74,25 @@
 
 <div class="start-button-container">
     <button class="start-button" id="start-button">
-        Start Sorting 🦜
+        Start Sorting 🐕
     </button>
+</div>
+
+<div class="sorted-items-container">
+    <div class="sorted-items-header">
+        Sort by lowest to heighest hunger level 
+    </div>
+    <div class="item-sorting-container" id="item-sorting">
+        <div id="sortable=0">
+            <div>
+                Hunger Level: 68
+            </div>
+            <img 
+                src="{{ url_for('static', filename='pictures/sortables/dog.png') }}" 
+            >
+        </div>
+        <!-- items will be injected -->
+    </div>
 </div>
 
 {% endblock %}
